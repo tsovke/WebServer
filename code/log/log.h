@@ -2,6 +2,7 @@
 
 #include "../bufer/bufer.h"
 #include "blockqueue.h"
+#include <cassert>
 #include <cstdarg>
 #include <cstdio>
 #include <cstring>
@@ -9,6 +10,7 @@
 #include <memory>
 #include <mutex>
 #include <string>
+#include <sys/select.h>
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <thread>

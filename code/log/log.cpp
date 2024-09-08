@@ -1,10 +1,4 @@
 #include "log.h"
-#include <cassert>
-#include <cstdarg>
-#include <cstdio>
-#include <ctime>
-#include <mutex>
-#include <sys/select.h>
 
 Log::Log() {
   fp_ = nullptr;
