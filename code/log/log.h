@@ -3,13 +3,16 @@
 #include "../bufer/bufer.h"
 #include "blockqueue.h"
 #include <cstdarg>
+#include <cstdio>
 #include <cstring>
+#include <ctime>
 #include <memory>
 #include <mutex>
 #include <string>
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <thread>
+#include <utility>
 
 class Log {
 public:
