@@ -3,7 +3,11 @@
 #include "../buffer/buffer.h"
 #include "../log/log.h"
 #include "../pool/sqlconnpool.h"
+#include <algorithm>
+#include <cassert>
 #include <cerrno>
+#include <cstdio>
+#include <cstring>
 #include <mysql/mysql.h>
 #include <regex>
 #include <string>
@@ -35,8 +39,8 @@ public:
 
 private:
   bool ParseRequestLine_(const std::string &line);
-  bool ParseHeader_(const std::string &line);
-  bool ParseBody_(const std::string &line);
+  void ParseHeader_(const std::string &line);
+  void ParseBody_(const std::string &line);
   void ParsePath_();
   void ParsePost_();
   void ParseFromUrlencoded_();

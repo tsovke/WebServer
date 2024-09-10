@@ -1,7 +1,4 @@
 #include "sqlconnpool.h"
-#include <mutex>
-#include <mysql/mysql.h>
-#include <semaphore.h>
 
 SqlConnPool *SqlConnPool::Instance() {
   static SqlConnPool pool;
