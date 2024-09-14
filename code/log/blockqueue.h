@@ -51,7 +51,7 @@ template <typename T> void BlockQueue<T>::clear() {
 
 template <typename T> bool BlockQueue<T>::empty() {
   std::lock_guard<std::mutex> lock(mtx_);
-  deq_.empty();
+  return deq_.empty();
 }
 template <typename T> bool BlockQueue<T>::full() {
   std::lock_guard<std::mutex> lock(mtx_);
